@@ -1,0 +1,7 @@
+{
+	"name": "matter-hooks",
+	"globIgnorePaths": ["**/*.spec.lua", "**/*.dev.lua"],
+	"tree": {
+		"$path": "lib"
+	}
+}

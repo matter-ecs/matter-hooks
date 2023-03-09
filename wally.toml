@@ -1,0 +1,15 @@
+[package]
+name = "lasttalon/matter-hooks"
+version = "0.1.0"
+description = "A hooks library for Matter"
+license = "MIT"
+authors = ["Lucas Gangstad <lucas@lasttalon.dev>"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = ["*.spec.lua", "*.dev.lua", "tests"]
+
+[dependencies]
+Matter = "evaera/matter@0.6.2"
+TestEZ = "roblox/testez@0.4.1" # This is needed currently because Matter has this as a regular dependency.
+
+[dev-dependencies]

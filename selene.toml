@@ -1,0 +1,6 @@
+std = "roblox+testez"
+
+[rules]
+shadowing = "allow"
+
+[config]

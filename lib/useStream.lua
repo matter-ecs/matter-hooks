@@ -50,9 +50,7 @@ type NormalizedOptions = {
 local function normalizeOptions(options: StreamOptions?): NormalizedOptions
 	return {
 		descendants = if options and options.descendants ~= nil then options.descendants else false,
-		attribute = if options and options.attribute
-			then options.attribute
-			else "serverIdAttribute",
+		attribute = if options and options.attribute then options.attribute else "serverEntityId",
 	}
 end
 

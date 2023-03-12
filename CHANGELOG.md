@@ -10,5 +10,15 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- Several hooks:
+  - `useChange` - Determines when the provided dependencies change.
+  - `useContextAction` - Registers asynchronous context actions within systems.
+  - `useMemo` - Returns a memoized value. Only recalculates when the provided
+    dependencies change.
+  - `useReducer` - Returns a state updated by a reducer as well as a dispatcher
+    for that reducer.
+
 [unreleased]: https://github.com/LastTalon/matter-hooks/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/LastTalon/matter-hooks/releases/tag/v0.1.0

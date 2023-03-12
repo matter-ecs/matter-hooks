@@ -13,6 +13,8 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 ### Added
 
 - Several hooks:
+  - `useAsync` - Calls and memoizes an asynchronous function when the provided
+    dependencies change.
   - `useChange` - Determines when the provided dependencies change.
   - `useContextAction` - Registers asynchronous context actions within systems.
   - `useMemo` - Returns a memoized value. Only recalculates when the provided

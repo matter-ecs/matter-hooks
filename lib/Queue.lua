@@ -13,7 +13,7 @@ function Queue:push<T>(value: T)
 
 	if self.front == nil then
 		self.front = node
-		self.front = node
+		self.back = node
 		return
 	end
 

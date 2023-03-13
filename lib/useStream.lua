@@ -118,7 +118,7 @@ local function useStream(id: unknown, options: StreamOptions?)
 	end
 
 	local index = 0
-	return function(): (number?, StreamEvent?)
+	return function(): (number?, StreamEvent)
 		index += 1
 
 		local value = storage.queue:shift()
@@ -126,7 +126,7 @@ local function useStream(id: unknown, options: StreamOptions?)
 		if value then
 			return index, value
 		end
-		return
+		return nil, (nil :: unknown) :: StreamEvent
 	end
 end
 

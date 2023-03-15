@@ -21,6 +21,9 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
     dependencies change.
   - `useReducer` - Returns a state updated by a reducer as well as a dispatcher
     for that reducer.
+  - `useStream` - Returns a loop iterator to process instance streaming events
+    for a provided streaming ID attribute, and optionally, its descendants as
+    they stream.
 
 [unreleased]: https://github.com/LastTalon/matter-hooks/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/LastTalon/matter-hooks/releases/tag/v0.1.0

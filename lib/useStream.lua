@@ -96,6 +96,10 @@ local function useStream(id: unknown, options: StreamOptions?)
 					end
 				),
 			}
+
+			for _, descendant in instance:GetDescendants() do
+				storage.queue:push(streamInEvent(descendant, true))
+			end
 		end)
 
 		storage.removingConnection = Workspace.DescendantRemoving:Connect(
@@ -105,6 +109,14 @@ local function useStream(id: unknown, options: StreamOptions?)
 				end
 
 				storage.queue:push(streamOutEvent(instance))
+
+				if not options.descendants then
+					return
+				end
+
+				for _, descendant in instance:GetDescendants() do
+					storage.queue:push(streamOutEvent(descendant, true))
+				end
 
 				local connections = storage.trackedInstances[instance]
 				if not connections then

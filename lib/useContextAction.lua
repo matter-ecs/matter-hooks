@@ -36,8 +36,8 @@ end
 	Registers asynchronous context actions within systems.
 
 	The callback is run as a context action normally would be and can sink inputs
-	as it normally would by returning an [ContextActionResult]. The callback can
-	be updated dynamically as the hook is called.
+	as it normally would by returning a [ContextActionResult]. The callback can be
+	updated dynamically as the hook is called.
 
 	:::info
 	It's important to keep in mind that the callback doesn't run within your

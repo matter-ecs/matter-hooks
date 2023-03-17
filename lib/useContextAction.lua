@@ -6,7 +6,7 @@ local Matter = require(Package.Parent.Matter)
 	.createButton boolean? -- Whether the context action creates a button
 	.inputTypes { Enum.Keycode | Enum.UserInputType }? -- An array of inputs for the context action
 
-	@within matter-hooks
+	@within Hooks
 	@interface ContextActionOptions
 ]=]
 export type ContextActionOptions = {
@@ -74,7 +74,7 @@ end
 	)
 	```
 
-	@within matter-hooks
+	@within Hooks
 ]=]
 local function useContextAction(
 	actionName: string,

@@ -63,7 +63,7 @@ local diffTables = require(Package.diffTables)
 	end
 	```
 
-	@within matter-hooks
+	@within Hooks
 
 	@return S -- The current state
 	@return (action: A) -> () -- The dispatch function

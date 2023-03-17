@@ -16,7 +16,7 @@ local diffTables = require(Package.diffTables)
 	end
 	```
 
-	@within matter-hooks
+	@within Hooks
 
 	@return boolean -- True if the dependencies have changed, false otherwise
 ]=]

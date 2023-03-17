@@ -4,7 +4,7 @@ local useMemo = require(script.useMemo)
 local useReducer = require(script.useReducer)
 
 --[=[
-	@class matter-hooks
+	@class Hooks
 ]=]
 
 return {

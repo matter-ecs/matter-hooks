@@ -24,7 +24,7 @@ local diffTables = require(Package.diffTables)
 	end, { dependency })
 	```
 
-	@within matter-hooks
+	@within Hooks
 
 	@return T... -- The memoized values
 ]=]

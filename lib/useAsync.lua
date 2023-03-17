@@ -16,7 +16,7 @@ local diffTables = require(Package.diffTables)
 	.success true
 	.value T
 
-	@within matter-hooks
+	@within Hooks
 	@interface AsyncSuccess
 ]=]
 export type AsyncSuccess<T> = {
@@ -38,7 +38,7 @@ export type AsyncSuccess<T> = {
 	.success false
 	.error E
 
-	@within matter-hooks
+	@within Hooks
 	@interface AsyncError
 ]=]
 export type AsyncError<E> = {
@@ -64,7 +64,7 @@ export type AsyncError<E> = {
 	end
 	```
 
-	@within matter-hooks
+	@within Hooks
 	@type AsyncResult AsyncSuccess<T> | AsyncError<E>
 ]=]
 export type AsyncResult<T, E> = AsyncSuccess<T> | AsyncError<E>
@@ -83,7 +83,7 @@ export type AsyncResult<T, E> = AsyncSuccess<T> | AsyncError<E>
 	.completed true
 	.result AsyncResult<T, string>
 
-	@within matter-hooks
+	@within Hooks
 	@interface AsyncComplete
 ]=]
 export type AsyncComplete<T> = {
@@ -96,7 +96,7 @@ export type AsyncComplete<T> = {
 
 	.completed false
 
-	@within matter-hooks
+	@within Hooks
 	@interface AsyncIncomplete
 ]=]
 export type AsyncIncomplete = {
@@ -121,7 +121,7 @@ export type AsyncIncomplete = {
 	end
 	```
 
-	@within matter-hooks
+	@within Hooks
 	@type AsyncReady AsyncComplete<T> | AsyncIncomplete
 ]=]
 export type AsyncReady<T> = AsyncComplete<T> | AsyncIncomplete
@@ -171,7 +171,7 @@ end
 	end
 	```
 
-	@within matter-hooks
+	@within Hooks
 
 	@return AsyncReady<T> -- The completion status
 ]=]

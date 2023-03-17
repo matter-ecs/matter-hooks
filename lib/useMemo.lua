@@ -25,6 +25,7 @@ local diffTables = require(Package.diffTables)
 	```
 
 	@within matter-hooks
+
 	@return T... -- The memoized values
 ]=]
 local function useMemo<T...>(

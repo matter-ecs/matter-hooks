@@ -66,7 +66,7 @@ local diffTables = require(Package.diffTables)
 	@within matter-hooks
 
 	@return S -- The current state
-	@return (action: A) → () -- The dispatch function
+	@return (action: A) -> () -- The dispatch function
 ]=]
 local function useReducer<S, A>(
 	reducer: (state: S, action: A) -> S,

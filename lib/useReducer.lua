@@ -24,7 +24,7 @@ local diffTables = require(Package.diffTables)
 
 	:::caution
 	Nothing is preventing your reducer from mutating state or causing side
-	effects. If you do things may not act as you expect.
+	effects. If you do, things may not act as you expect.
 	:::
 
 	```lua

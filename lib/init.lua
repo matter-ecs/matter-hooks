@@ -5,6 +5,10 @@ local useMemo = require(script.useMemo)
 local useReducer = require(script.useReducer)
 local useStream = require(script.useStream)
 
+--[=[
+	@class Hooks
+]=]
+
 return {
 	useAsync = useAsync,
 	useChange = useChange,

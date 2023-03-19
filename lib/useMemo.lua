@@ -2,6 +2,32 @@ local Package = script.Parent
 local Matter = require(Package.Parent.Matter)
 local diffTables = require(Package.diffTables)
 
+--[=[
+	Used to store memoized values that update when dependencies change.
+
+	This is commonly used to perform tasks that are expensive and only need to be
+	updated occasionally. The result of the operation will be memoized so you can
+	retrieve the same values repeatedly after the action has been run.
+
+	The values are only recalculated when the dependencies change. This can be
+	used for values that need to be updated in response to something else.
+
+	:::caution
+	If no dependency array is provided, new values will be recalculated every
+	time. For actions that only need to run once ever, an empty array can be
+	provided.
+	:::
+
+	```lua
+	local result = useMemo(function(): number
+		return expensiveOperation(dependency)
+	end, { dependency })
+	```
+
+	@within Hooks
+
+	@return T... -- The memoized values
+]=]
 local function useMemo<T...>(
 	callback: () -> T...,
 	dependencies: { unknown },

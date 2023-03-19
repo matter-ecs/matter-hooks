@@ -1,0 +1,23 @@
+gitSourceBranch = "main"
+
+[docusaurus]
+title = "Matter Hooks"
+tagline = "A hooks library for Matter"
+
+[home]
+enabled = true
+
+[[home.features]]
+title = "Build faster"
+description = "Matter Hooks streamlines development by providing a collection of pre-built hooks that can be easily integrated into your project, saving you time and effort."
+
+[[home.features]]
+title = "Simplify your Matter code"
+description = "With Matter Hooks, you can easily access useful hooks not included in the core library, reducing complexity and increasing readability in your code."
+
+[[home.features]]
+title = "Reliable"
+description = "Matter Hooks is rigorously tested and maintained to ensure reliable performance and compatibility with the latest versions of Matter."
+
+[footer]
+copyright = "Copyright © 2023 Lucas Gangstad. Built with Moonwave and Docusaurus"

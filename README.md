@@ -5,6 +5,9 @@
 	<a href="https://github.com/LastTalon/matter-hooks/actions/workflows/ci.yaml">
 		<img src="https://github.com/LastTalon/matter-hooks/actions/workflows/ci.yaml/badge.svg" alt="CI Status">
 	</a>
+  	<a href="https://lasttalon.github.io/matter-hooks/">
+		<img src="https://github.com/LastTalon/matter-hooks/actions/workflows/docs.yaml/badge.svg" alt="Documentation">
+	</a>
 </div>
 <br>
 

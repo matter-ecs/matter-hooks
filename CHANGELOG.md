@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
     dependencies change.
   - `useChange` - Determines when the provided dependencies change.
   - `useContextAction` - Registers asynchronous context actions within systems.
+  - `useMap` - Retrieves a value from a map using a key.
   - `useMemo` - Returns a memoized value. Only recalculates when the provided
     dependencies change.
   - `useReducer` - Returns a state updated by a reducer as well as a dispatcher

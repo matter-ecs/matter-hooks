@@ -6,7 +6,7 @@ license = "MIT"
 authors = ["Lucas Gangstad <lucas@lasttalon.dev>"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-exclude = ["*.spec.lua", "*.dev.lua", "tests"]
+exclude = ["*.spec.lua", "*.dev.lua", "tests", "docs"]
 
 [dependencies]
 Matter = "evaera/matter@0.6.2"

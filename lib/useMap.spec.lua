@@ -3,8 +3,6 @@ local Matter = require(Package.Parent.Matter)
 local useMap = require(script.Parent.useMap)
 
 return function()
-	FOCUS()
-
 	describe("hook", function()
 		local event = Instance.new("BindableEvent")
 		local world

@@ -3,11 +3,29 @@ local Package = script.Parent
 local Matter = require(Package.Parent.Matter)
 local Queue = require(Package.Queue)
 
+--[=[
+	.descendants boolean? -- Whether to collect events about descendants
+	.attribute string? -- The attribute to use
+
+	@within Hooks
+	@interface StreamOptions
+]=]
 export type StreamOptions = {
 	descendants: boolean?,
 	attribute: string?,
 }
 
+--[=[
+	An event for an instance that has streamed in.
+
+	.adding true
+	.removing false
+	.descendant boolean
+	.instance Instance
+
+	@within Hooks
+	@interface StreamInEvent
+]=]
 export type StreamInEvent = {
 	adding: true,
 	removing: false,
@@ -15,6 +33,17 @@ export type StreamInEvent = {
 	instance: Instance,
 }
 
+--[=[
+	An event for an instance that has streamed out.
+
+	.adding false
+	.removing true
+	.descendant boolean
+	.instance Instance
+
+	@within Hooks
+	@interface StreamOutEvent
+]=]
 export type StreamOutEvent = {
 	adding: false,
 	removing: true,
@@ -22,6 +51,13 @@ export type StreamOutEvent = {
 	instance: Instance,
 }
 
+--[=[
+	An event for an instance that has streamed in or out. The `adding` and
+	`removing` fields indicate whether the instance is streaming in or out.
+
+	@within Hooks
+	@type StreamEvent StreamInEvent | StreamOutEvent
+]=]
 export type StreamEvent = StreamInEvent | StreamOutEvent
 
 local function streamInEvent(instance: Instance, descendant: boolean?): StreamInEvent
@@ -63,7 +99,75 @@ local function cleanup(storage)
 	end
 end
 
-local function useStream(id: unknown, options: StreamOptions?)
+--[=[
+	Collects instance streaming events for a streaming ID attribute.
+
+	Allows iteration over collected events for the instances tagged with an ID
+	using an attribute. It can optionally collect events for the descendants of
+	that instance as they stream in and out.
+
+	Each streaming event is returned in the order it happened.
+
+	```lua
+	for _, streamEvent in useStream(entityId) do
+		if streamEvent.adding then
+			processStreamedIn(streamEvent.instance)
+		else
+			processStreamedOut(streamEvent.instance)
+		end
+	end
+	```
+
+	If the hook is no longer called, all events will be cleaned up automatically.
+
+	:::caution
+	The events are stored in a queue that must be processed. If events are left in
+	the queue they will remain for next frame, arriving late.
+
+	To avoid this, all events should be processed each frame.
+
+	```lua
+	for _, streamEvent in useStream(entityId) do
+		if processEvent(streamEvent) then
+			break -- Uh oh! This can miss events!
+		end
+	end
+	```
+	:::
+
+	The ID can be anything you use to identify instances streamed from the server,
+	but is typically a server entity ID. The default attribute this hook uses to
+	discover instances by this ID is `serverEntityId`, but can be optionally
+	configured.
+
+	```lua
+	for _, streamEvent in
+		useStream(entityId, {
+			attribute = "StreamingId",
+		})
+	do
+		processStream(streamEvent)
+	end
+	```
+
+	If the instance being streamed has descendants that stream in at different
+	times, you may want to listen for them. This can be configured as well.
+
+	```lua
+	for _, streamEvent in
+		useStream(entityId, {
+			descendants = true,
+		})
+	do
+		processStream(streamEvent)
+	end
+	```
+
+	@within Hooks
+
+	@return () -> (number, StreamEvent)?  -- The event iterator
+]=]
+local function useStream(id: unknown, options: StreamOptions?): () -> (number?, StreamEvent)
 	local storage = Matter.useHookState(id, cleanup)
 
 	if not storage.queue then

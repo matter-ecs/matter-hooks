@@ -57,9 +57,13 @@ local diffTables = require(Package.diffTables)
 	end
 
 	if increaseCondition then
-		dispatch("increase")
+		dispatch({
+			type = "increase",
+		})
 	elseif decreaseCondition then
-		dispatch("decrease")
+		dispatch({
+			type = "decrease",
+		})
 	end
 	```
 

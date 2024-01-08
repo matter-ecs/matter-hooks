@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ""
-labels: enhancement
+labels: feature
 assignees: ""
 ---
 
@@ -10,7 +10,7 @@ assignees: ""
 
 A clear and concise description of what the problem is or what you would like to
 do differently. If there is a related
-[issue](https://github.com/LastTalon/matter-hooks/issues), let us know here.
+[issue](https://github.com/matter-ecs/matter-hooks/issues), let us know here.
 
 ## Proposed solution
 

@@ -5,14 +5,58 @@ on:
     tags: ["v*"]
 
 jobs:
-  release:
-    name: Release
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout Project
+        uses: actions/checkout@v3
+
+      - name: Install Aftman
+        uses: ok-nick/setup-aftman@v0.3.0
+
+      - name: Build
+        run: rojo build --output build.rbxm default.project.json
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Matter Hooks ${{ github.ref }}
+          name: build
+          path: build.rbxm
+
+  release:
+    name: Release
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+
+      - name: Download Build
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: matter-hooks.rbxm
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Matter Hooks ${{ github.ref }}
+          body: |
+            Matter Hooks ${{ github.ref }} is now available!
+          files: |
+            matter-hooks.rbxm
+
+  publish:
+    name: Publish
+    needs: [release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+
+      - name: Install Aftman
+        uses: ok-nick/setup-aftman@v0.3.0
+
+      - name: Publish
+        run: wally publish --token ${{ secrets.WALLY_AUTH_TOKEN }}

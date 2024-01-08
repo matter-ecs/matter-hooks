@@ -1,9 +1,12 @@
 [package]
-name = "lasttalon/matter-hooks"
-version = "0.1.0"
+name = "matter-ecs/matter-hooks"
 description = "A hooks library for Matter"
+version = "0.1.0"
 license = "MIT"
-authors = ["Lucas Gangstad <lucas@lasttalon.dev>"]
+authors = [
+    "Lucas Gangstad <lucas@lasttalon.dev>",
+    "Ukendio <ukendio@gmail.com>",
+]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 exclude = ["*.spec.lua", "*.dev.lua", "tests", "docs"]

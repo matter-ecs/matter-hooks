@@ -1,20 +1,13 @@
-<div align="center">
-	<h1>Matter Hooks</h1>
-</div>
-<div align="center">
-	<a href="https://github.com/LastTalon/matter-hooks/actions/workflows/ci.yaml">
-		<img src="https://github.com/LastTalon/matter-hooks/actions/workflows/ci.yaml/badge.svg" alt="CI Status">
-	</a>
-  	<a href="https://lasttalon.github.io/matter-hooks/">
-		<img src="https://github.com/LastTalon/matter-hooks/actions/workflows/docs.yaml/badge.svg" alt="Documentation">
-	</a>
-</div>
-<br>
+# Matter Hooks [![CI status][ci-badge]][ci] [![Docs status][docs-badge]][docs]
 
-**Matter Hooks** is a [Luau] hooks library for [Matter].
+**Matter Hooks** is a _[Luau]_ hooks library for _[Matter]_.
 
 It provides access to useful hooks not included in with Matter.
 
+[ci-badge]: https://github.com/matter-ecs/matter-hooks/actions/workflows/ci.yaml/badge.svg
+[docs-badge]: https://github.com/matter-ecs/matter-hooks/actions/workflows/docs.yaml/badge.svg
+[ci]: https://github.com/matter-ecs/matter-hooks/actions/workflows/ci.yaml
+[docs]: https://matter-ecs.github.io/matter-hooks/
 [luau]: https://luau-lang.org/
 [matter]: https://eryn.io/matter/
 
@@ -24,7 +17,7 @@ Matter Hooks can be installed with [Wally] by including it as a dependency in
 your `wally.toml` file.
 
 ```toml
-MatterHooks = "lasttalon/matter-hooks@0.1.0"
+MatterHooks = "matter-ecs/matter-hooks@0.1.0"
 ```
 
 ## Building

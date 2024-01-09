@@ -9,7 +9,7 @@ assignees: ""
 ## Description
 
 A clear and concise description of what the bug is. Be sure this isn't a
-[duplicate report](https://github.com/LastTalon/matter-hooks/issues) (if it is,
+[duplicate report](https://github.com/matter-ecs/matter-hooks/issues) (if it is,
 contribute to the already opened bug report).
 
 ## Steps to reproduce

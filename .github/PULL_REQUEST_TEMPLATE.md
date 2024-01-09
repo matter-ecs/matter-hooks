@@ -2,12 +2,12 @@
 
 A clear and concise description of what your changes are. Explain to
 maintainers why we should accept your solution. Be sure to adhere to our
-[contribution guidelines](https://github.com/LastTalon/matter-hooks/blob/main/CONTRIBUTING.md).
+[contribution guidelines](https://github.com/matter-ecs/matter-hooks/blob/main/CONTRIBUTING.md).
 
 ## Related issues
 
 Explain how this pull request relates to any relevant
-[issues](https://github.com/LastTalon/matter-hooks/issues). Bugs and features
+[issues](https://github.com/matter-ecs/matter-hooks/issues). Bugs and features
 should always have related issues.
 
 ## Additional comments

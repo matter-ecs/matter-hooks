@@ -53,12 +53,14 @@ Great!
 ### Did you fix something purely cosmetic in the codebase?
 
 We appreciate your enthusiasm, however cosmetic code patches are unlikely to be
-approved. We do care about code quality, but the cost of reviewing it typically
-outweighs the benefit of the change.
+approved. We do care about code quality, but the [cost] typically outweighs the
+benefit of the change.
+
+[cost]: https://github.com/rails/rails/pull/13771#issuecomment-32746700
 
 ## Releases
 
-Releases for Sentinel are made by a maintainer using a release branch and a
+Releases for Matter Hooks are made by a maintainer using a release branch and a
 pull request.
 
 1. Create a new release branch
@@ -67,9 +69,9 @@ pull request.
 4. Create a pull request against `main`
 5. Review to ensure a stable release
 6. Make any necessary changes (be sure to keep `CHANGELOG.md` accurate)
-7. Rebase and merge the pull request
+7. Squash and merge the pull request
 8. Push a new version tag
 9. Write GitHub release notes
 
 [semver]: https://semver.org/
-[issue]: https://github.com/LastTalon/matter-hooks/issues
+[issue]: https://github.com/matter-ecs/matter-hooks/issues

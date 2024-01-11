@@ -10,6 +10,9 @@
 					"$path": "lib"
 				}
 			},
+			"DevPackages": {
+				"$path": "DevPackages"
+			},
 			"tests": {
 				"$path": "tests"
 			}

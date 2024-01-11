@@ -35,5 +35,5 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
     they stream.
 
 [unreleased]: https://github.com/matter-ecs/matter-hooks/compare/v0.2.0...HEAD
-[0.1.0]: https://github.com/matter-ecs/matter-hooks/releases/tag/v0.2.0
+[0.2.0]: https://github.com/matter-ecs/matter-hooks/releases/tag/v0.2.0
 [0.1.0]: https://github.com/matter-ecs/matter-hooks/releases/tag/v0.1.0

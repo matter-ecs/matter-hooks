@@ -11,8 +11,11 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 exclude = ["*.spec.lua", "*.dev.lua", "tests", "docs"]
 
+[place]
+shared-packages = "game.ReplicatedStorage.Packages"
+
 [dependencies]
-Matter = "evaera/matter@0.6.2"
-TestEZ = "roblox/testez@0.4.1" # This is needed currently because Matter has this as a regular dependency.
+Matter = "matter-ecs/matter@>=0.6.2, <0.8.0"
 
 [dev-dependencies]
+TestEZ = "roblox/testez@0.4.1"

@@ -26,6 +26,10 @@ If you're currently using the scope `lasttalon/matter-hooks`, this is the same
 package. You can migrate by changing your `wally.toml` file to use the scope
 `matter-ecs/matter-hooks`.
 
+If you have migrated to `ecs-matter/matter`, you should also upgrade to
+`ecs-matter/matter-hooks@0.2.0` or newer. This version of Matter Hooks is
+compatible with the `ecs-matter/matter` package scope as a peer dependency.
+
 ## Building
 
 Before building, you'll need to install all dependencies using [Wally].

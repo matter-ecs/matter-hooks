@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-01-11
+
+### Changed
+
+- Updated to use the `matter-ecs/matter` package scope as a peer dependency.
+
 ## [0.1.0] - 2023-03-18
 
 ### Added
@@ -28,5 +34,6 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
     for a provided streaming ID attribute, and optionally, its descendants as
     they stream.
 
-[unreleased]: https://github.com/matter-ecs/matter-hooks/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/matter-ecs/matter-hooks/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/matter-ecs/matter-hooks/releases/tag/v0.2.0
 [0.1.0]: https://github.com/matter-ecs/matter-hooks/releases/tag/v0.1.0

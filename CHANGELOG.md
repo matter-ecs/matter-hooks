@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 
 ### Changed
 
-- Updated to use the `ecs-matter/matter` package scope as a peer dependency.
+- Updated to use the `matter-ecs/matter` package scope as a peer dependency.
 
 ## [0.1.0] - 2023-03-18
 

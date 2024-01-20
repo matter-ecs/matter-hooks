@@ -27,8 +27,8 @@ package. You can migrate by changing your `wally.toml` file to use the scope
 `matter-ecs/matter-hooks`.
 
 If you have migrated to `ecs-matter/matter`, you should also upgrade to
-`ecs-matter/matter-hooks@0.2.0` or newer. This version of Matter Hooks is
-compatible with the `ecs-matter/matter` package scope as a peer dependency.
+`matter-ecs/matter-hooks@0.2.0` or newer. This version of Matter Hooks is
+compatible with the `matter-ecs/matter` package scope as a peer dependency.
 
 ## Building
 

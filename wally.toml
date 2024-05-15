@@ -15,7 +15,7 @@ exclude = ["*.spec.lua", "*.dev.lua", "tests", "docs"]
 shared-packages = "game.ReplicatedStorage.Packages"
 
 [dependencies]
-Matter = "matter-ecs/matter@>=0.6.2, <0.8.0"
+Matter = "matter-ecs/matter@>=0.6.2, <0.9.0"
 
 [dev-dependencies]
 TestEZ = "roblox/testez@0.4.1"

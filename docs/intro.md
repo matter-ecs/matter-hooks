@@ -20,7 +20,7 @@ To use Matter Hooks, you need to include it as a dependency in your `wally.toml`
 file. Matter Hooks can then be installed with [Wally].
 
 ```toml
-MatterHooks = "lasttalon/matter-hooks@0.1.0"
+MatterHooks = "lasttalon/matter-hooks@0.2.1"
 ```
 
 [wally]: https://wally.run

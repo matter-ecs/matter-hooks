@@ -17,7 +17,7 @@ Matter Hooks can be installed with [Wally] by including it as a dependency in
 your `wally.toml` file.
 
 ```toml
-MatterHooks = "matter-ecs/matter-hooks@0.2.0"
+MatterHooks = "matter-ecs/matter-hooks@0.2.1"
 ```
 
 ## Migration

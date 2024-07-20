@@ -174,8 +174,8 @@ local function useStream(id: unknown, options: StreamOptions?): () -> (number?, 
 		local options = normalizeOptions(options)
 		storage.queue = Queue.new()
 		storage.trackedInstances = {}
-
-		storage.addedConnection = Workspace.DescendantAdded:Connect(function(instance: Instance)
+		
+		local function newDescendant(instance: Instance)
 			if instance:GetAttribute(options.attribute) ~= id then
 				return
 			end
@@ -204,7 +204,12 @@ local function useStream(id: unknown, options: StreamOptions?): () -> (number?, 
 			for _, descendant in instance:GetDescendants() do
 				storage.queue:push(streamInEvent(descendant, true))
 			end
-		end)
+		end
+		
+		storage.addedConnection = Workspace.DescendantAdded:Connect(newDescendant)
+		for _, instance: Instance in Workspace:GetDescendants() do
+			newDescendant(instance)
+		end
 
 		storage.removingConnection = Workspace.DescendantRemoving:Connect(
 			function(instance: Instance)
